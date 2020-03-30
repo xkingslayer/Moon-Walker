@@ -1,0 +1,25 @@
+dailySteps = int(input("How many steps on average do you walk daily? "))
+weeklySteps = dailySteps*7
+monthlySteps = dailySteps*30
+yearlySteps = dailySteps*365
+stepsToMile = 2000
+miles = yearlySteps/stepsToMile
+moonDistance = 238855
+moonLeftover = moonDistance-miles
+moonPercent = miles/moonLeftover*100
+rate = moonDistance/miles
+ 
+
+if dailySteps > 0: 
+    print("Weekly you take around", weeklySteps, "steps.",)
+    print("Monthly you take around", monthlySteps, "steps.")
+    print("Yearly you take around", yearlySteps, "steps.")
+    print("You traveled ", miles, "miles this year.")
+    print("There are", moonLeftover, " more miles needed to walk to the Moon.")
+    print("You traveled ", round(moonPercent, 2), "% of the distance to the Moon.")
+    print("At this rate it would take you ", round(rate,2), "years to walk to the Moon.")
+else:
+    print("Incorrect number, please enter another. You only get one more attempt!")
+    int(input("How many steps on average do you walk daily?"))
+
+
